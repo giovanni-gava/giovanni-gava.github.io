@@ -1,0 +1,309 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    line-height: 1.6;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+}
+
+/* Header Navigation */
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ff4081;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    min-height: 90vh; /* Garante que ocupe toda a tela */
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.profile-image {
+    margin-top: 20px;
+    width: 200px; /* Diminua para ajustar o tamanho da imagem */
+    height: auto;
+    border-radius: 10px; /* Mantém o formato retangular com bordas suaves */
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+.hero-content h2 {
+    font-size: 3.5rem; /* Ajuste conforme o template */
+    color: #ff4081;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+
+.cta-button {
+    background: linear-gradient(135deg, #ff4081, #844aff);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #e91e63, #6a0dad);
+}
+
+.cta-button::after {
+    content: '→';
+    margin-left: 10px;
+    transition: margin-left 0.3s;
+}
+
+.cta-button:hover::after {
+    margin-left: 15px;
+}
+
+
+.profile-image {
+    margin-top: 20px;
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 10px; /* Forma retangular com bordas suaves */
+    position: relative;
+    z-index: 1;
+}
+
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px); /* Tamanho maior para englobar o efeito */
+    height: calc(100% + 20px);
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ff4081, #844aff, #ffeb3b);
+    background-size: 300% 300%;
+    animation: glowing 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes glowing {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* About Section */
+.about {
+    background-color: #fff;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Services Section */
+.services {
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    margin-bottom: 10px;
+    color: #ff4081;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+/* Projects Section */
+.projects {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff4081;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e91e63;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .service-list,
+    .project-list {
+        flex-direction: column;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
